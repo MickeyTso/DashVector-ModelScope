@@ -13,15 +13,10 @@
 ### 1.2 准备工作
 1.  获取DashVector的API-KEY。API-KEY用于访问DashVector服务，详请参考：[help.aliyun.com/document_de…](https://link.juejin.cn?target=https%3A%2F%2Fhelp.aliyun.com%2Fdocument_detail%2F2510230.html "https://help.aliyun.com/document_detail/2510230.html")  
 
-
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/78953a88a40d425f874bd570fde3c3d9~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgTWlja2V5VHNv:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMjY5ODY2NzcyNDkwOTg4NCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1724752999&x-orig-sign=PGbqOxpCv7quqdpm4t87CTJAAWE%3D) 
-
 2. 申请DashVector测试实例，DashVector提供免费试用实例，可以薅一波。详情请见：[help.aliyun.com/document_de…](https://link.juejin.cn?target=https%3A%2F%2Fhelp.aliyun.com%2Fdocument_detail%2F2568083.html "https://help.aliyun.com/document_detail/2568083.html")
 
 3.  获取DashVector实例的endpoint，endpoint用于访问DashVector具体的实例。详情请见：[help.aliyun.com/document_de…](https://link.juejin.cn?target=https%3A%2F%2Fhelp.aliyun.com%2Fdocument_detail%2F2568084.html "https://help.aliyun.com/document_detail/2568084.html")
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/7000613633ac489a81c1cf2c97fa138d~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgTWlja2V5VHNv:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMjY5ODY2NzcyNDkwOTg4NCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1724752999&x-orig-sign=NTz0zyw%2Bam41cwLO7JqDmwwOhk0%3D)
-4. 安装DashVector、DashText、ModelScope的SDK
 ``` shell
 pip install dashvector dashtext modelscope
 ```
@@ -51,9 +46,8 @@ wget https://dashvector-data.oss-cn-beijing.aliyuncs.com/public/sparsevector/bm2
 }]
 
 ```
-3. 搜索过程：通过对输入的文本或者图片，提取特征，并通过特征在DashVector中已经索引的向量中进行相似向量查询，并将查询后的结果解析成可视化的图片和文本，即完成了搜索过程。详情请看下图。
+3. 搜索过程：通过对输入的文本或者图片，提取特征，并通过特征在DashVector中已经索引的向量中进行相似向量查询，并将查询后的结果解析成可视化的图片和文本，即完成了搜索过程。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/283caf82515842a28e63a0783ad9ba20~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgTWlja2V5VHNv:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMjY5ODY2NzcyNDkwOTg4NCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1724753689&x-orig-sign=9ND6%2FyWCFP4UnqJe1zIFIGc9xIs%3D)
 ## 2、创建DashVector Collection
 创建`CreateCollection.py`文件
 ```python
@@ -240,9 +234,6 @@ if __name__ == '__main__':
 ```
 3. 向量插入后，就可以在DashVector控制台看到向量啦！[dashvector.console.aliyun.com/cn-hangzhou…](https://link.juejin.cn/?target=https%3A%2F%2Fdashvector.console.aliyun.com%2Fcn-hangzhou%2Fcluster%2F "https://dashvector.console.aliyun.com/cn-hangzhou/cluster/")
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/257189bb6d5c4af68bc3ad46251e5064~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgTWlja2V5VHNv:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMjY5ODY2NzcyNDkwOTg4NCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1724753964&x-orig-sign=Y0x%2FAop%2Bmf8%2BBu%2BY6pVOvnibrAo%3D)
-
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/0901db3467754d25897a0d4a199ec1f5~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgTWlja2V5VHNv:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMjY5ODY2NzcyNDkwOTg4NCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1724753964&x-orig-sign=6yGHewVKF512unCiFrOryGjlRIU%3D)
 
 ## 4、图片和文本搜索
 1.  图片插入成功后，即可进行图片和文本的跨模态搜索了，同样由于搜索过程中，涉及到图片特征提取，建议使用GPU进行。创建`SearchImageAndText.py`
